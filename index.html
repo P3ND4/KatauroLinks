@@ -133,8 +133,24 @@
 
     @media (max-width: 1000px) {
         .main {
+            padding: 56px 53px 0px 53px;
             flex-direction: column;
             align-items: center;
+            height: auto;
+        }
+
+    }
+
+    @media (max-width: 424px) {
+        .main {
+            gap: 0px;
+        }
+        .info {
+            transform: scale(0.8);
+            gap: 8px;
+        }
+        .button-container{
+            transform: scale(0.8);
         }
 
     }
@@ -145,7 +161,7 @@
 
 <body style="margin: 0px 0px;">
     <div class="main">
-        <img class="background-image" src="./Carousel-image.webp" alt="Background Image"
+        <img class="background-image" src="./back_image.png" alt="Background Image"
             style="width: 100%; height: 100%; object-fit: cover;">
         <div class="info">
             <h1>
