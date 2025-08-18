@@ -83,9 +83,10 @@
     .button-base {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: start;
         border-radius: 8px;
-        padding: 12px 20px;
+        padding-block: 12px;
+        padding-left: 30%;
         box-sizing: border-box;
         border: 1px solid var(--Brand-600, #178C94);
         background-color: #178C94;
@@ -142,6 +143,12 @@
         z-index: -1;
     }
 
+    @media (max-width: 1260px) {
+        .button-base {
+            padding-left: 20%;
+        }
+    }
+
     @media (max-width: 1000px) {
         .main {
             padding: 56px 53px 56px 53px;
@@ -164,7 +171,19 @@
 
         }
 
+        .button-base {
+            padding-left: 30%;
+        }
     }
+
+    @media (max-width: 600px) {
+
+        .button-base {
+            padding-left: 20px;
+            justify-content: start;
+        }
+    }
+
 
     @media (max-width: 424px) {
         .main {
@@ -187,6 +206,14 @@
     @media (max-width: 364px) {
         a {
             width: 100%;
+        }
+
+
+
+
+        .button-base label {
+            font-size: 12px;
+            text-align: left;
         }
 
     }
