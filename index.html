@@ -17,12 +17,21 @@
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
     .main {
-        padding: 145px 136px 145px 116px;
-        position: relative;
+        display: flex;
         height: 100vh;
         width: 100vw;
-        display: flex;
+        padding: 136px 145px 116px 145px;
+        align-items: flex-start;
+        gap: 30px;
         box-sizing: border-box;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+        flex: 1 0 0;
     }
 
     .info h1 {
@@ -35,6 +44,7 @@
         font-weight: 600;
         line-height: 90px;
         /* 125% */
+        margin: 0px;
         letter-spacing: -1.44px;
     }
 
@@ -48,9 +58,10 @@
         font-weight: 500;
         line-height: 30px;
         /* 150% */
+        margin: 0px;
     }
 
-    img {
+    .background-image {
         object-fit: cover;
         height: 100%;
         width: 100%;
@@ -59,20 +70,108 @@
         right: 0;
         z-index: -1;
     }
+
+    .button-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        flex: 1 0 0;
+    }
+
+
+    .button-base {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        border: 1px solid var(--Brand-600, #178C94);
+        background-color: #178C94;
+        box-shadow: 0 1px 2px 0 rgba(10, 13, 18, 0.05);
+        transition: background-color 0.5s ease;
+        text-decoration: none;
+        width: 100%;
+        gap: 8px;
+    }
+
+    .button-base label {
+        color: var(--White, #FFF);
+        /* Text md/Semibold */
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px;
+    }
+
+    .button-base:hover {
+        border: 1px solid var(--Brand-700, #007981);
+        background: var(--Brand-700, #007981);
+        /* Shadow/xs */
+        box-shadow: 0 1px 2px 0 rgba(10, 13, 18, 0.05);
+        cursor: pointer;
+    }
+
+    .button-base label:hover {
+        cursor: pointer;
+    }
+
+    .button-base:active {
+
+        border: 1px solid var(--Brand-600, #178C94);
+        background: var(--Brand-600, #178C94);
+        box-shadow: 0 1px 2px 0 rgba(10, 13, 18, 0.05), 0 0 0 4px #F4EBFF;
+    }
+
+    .button-base.disabled {
+        border: 1px solid var(--Brand-200, #C7E5E7);
+        background: var(--Brand-200, #C7E5E7);
+        box-shadow: 0 1px 2px 0 rgba(10, 13, 18, 0.05);
+    }
 </style>
 
 
 
 <body style="margin: 0px 0px;">
     <div class="main">
-        <img src="./Carousel-image.webp" alt="Background Image" style="width: 100%; height: 100%; object-fit: cover;">
+        <img class="background-image" src="./Carousel-image.webp" alt="Background Image"
+            style="width: 100%; height: 100%; object-fit: cover;">
         <div class="info">
             <h1>
                 Katauro
             </h1>
             <p>
-
+                Descubre nuestras luminarias, sigue nuestro trabajo y mantente en contacto desde aquí.
             </p>
+        </div>
+        <div class="button-container">
+            <a class="button-base" href="https://wa.me/53789828" id="what">
+                <img src="./Whatsapp.svg" alt="">
+                <label for="what">Conversa con nosotros</label>
+            </a>
+
+            <a class="button-base" href="https://www.instagram.com/katauro_luminarias?igsh=MzRlODBiNWFlZA==" id="inst">
+                <img src="./instagram.svg" alt="">
+                <label for="inst">Inspírate con nuestras piezas</label>
+            </a>
+            <a class="button-base" href="https://www.facebook.com/share/14GfV5e1qM7/?mibextid=wwXIfr" id="face">
+                <img src="./Facebooooo.svg" alt="">
+                <label for="face">Sigue nuestras novedades</label>
+            </a>
+            <a class="button-base disabled" href="#" id="site">
+                <img src="./globe.svg" alt="">
+                <label for="site">Explora nuestra galería</label>
+            </a>
+            <a class="button-base disabled" href="#" id="ubic">
+                <img src="./map.svg" alt="">
+                <label for="ubic">Visítanos en Miramar, Playa</label>
+            </a>
+
+
+
+
         </div>
     </div>
 
