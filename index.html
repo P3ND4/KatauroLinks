@@ -131,6 +131,17 @@
         box-shadow: 0 1px 2px 0 rgba(10, 13, 18, 0.05);
     }
 
+    .degradado {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: black;
+        opacity: 0.25;
+        z-index: -1;
+    }
+
     @media (max-width: 1000px) {
         .main {
             padding: 56px 53px 56px 53px;
@@ -141,11 +152,13 @@
             justify-content: start;
 
         }
+
         .info {
             height: auto;
             flex: none;
         }
-        .button-container{
+
+        .button-container {
             width: 100%;
             flex: none;
 
@@ -185,6 +198,7 @@
     <div class="main">
         <img class="background-image" src="./back_image.png" alt="Background Image"
             style="width: 100%; height: 100%; object-fit: cover;">
+        <div class="degradado"></div>
         <div class="info">
             <h1>
                 Katauro
@@ -205,7 +219,7 @@
             </a>
             <a class="button-base" href="https://www.facebook.com/share/14GfV5e1qM7/?mibextid=wwXIfr" id="face">
                 <img src="./Facebooooo.svg" alt="">
-                <label for="face">Sigue nuestras novedades</label>
+                <label for="face">Sigue las novedades</label>
             </a>
             <a class="button-base disabled" href="#" id="site">
                 <img src="./globe.svg" alt="">
